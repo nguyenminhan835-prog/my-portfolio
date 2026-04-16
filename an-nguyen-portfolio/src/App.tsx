@@ -46,7 +46,7 @@ export default function App() {
       {/* Hero */}
       <section className="min-h-screen flex flex-col items-center justify-center text-center px-6 relative z-10">
         <motion.h1
-          style={{ y: textY, fontFamily: "'Instrument Serif', serif" }} // Đã thêm font điệu cho tiêu đề chính
+          style={{ y: textY, fontFamily: "'Instrument Serif', serif" }} 
           className="text-5xl sm:text-7xl md:text-8xl leading-[0.95] max-w-6xl"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -65,7 +65,7 @@ export default function App() {
         </motion.p>
       </section>
 
-      {/* About Section - Đã thêm id="about" và font điệu */}
+      {/* About Section - Thêm id="about" */}
       <section id="about" className="min-h-screen flex items-center justify-center px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 80 }}
@@ -74,14 +74,14 @@ export default function App() {
           viewport={{ once: true }}
           className="text-center max-w-2xl"
         >
-          <h2 className="text-4xl mb-6 font-display">About Me</h2> {/* Sửa lại font-display ở đây */}
+          <h2 className="text-4xl mb-6 font-display">About Me</h2> 
           <p className="text-gray-400">
             I'm currently a final-year high school student who enjoys learning, communicating, and challenging myself through new experiences. I'm shaping my future step by step.
           </p>
         </motion.div>
       </section>
 
-      {/* Projects Section - Đã thêm id="projects" và font điệu */}
+      {/* Projects Section - Thêm id="projects" */}
       <section id="projects" className="min-h-screen flex items-center justify-center px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 80 }}
@@ -90,14 +90,14 @@ export default function App() {
           viewport={{ once: true }}
           className="text-center max-w-2xl"
         >
-          <h2 className="text-4xl mb-6 font-display">Projects</h2> {/* Sửa lại font-display ở đây */}
+          <h2 className="text-4xl mb-6 font-display">Projects</h2> 
           <p className="text-gray-400">
             Personal portfolio website, school presentations, and small projects reflecting my learning journey.
           </p>
         </motion.div>
       </section>
 
-      {/* Contact Section - Đã thêm id="contact" và font điệu */}
+      {/* Contact Section - Thêm id="contact" */}
       <section id="contact" className="min-h-screen flex items-center justify-center px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 80 }}
@@ -106,7 +106,7 @@ export default function App() {
           viewport={{ once: true }}
           className="text-center max-w-2xl"
         >
-          <h2 className="text-4xl mb-6 font-display">Contact</h2> {/* Sửa lại font-display ở đây */}
+          <h2 className="text-4xl mb-6 font-display">Contact</h2> 
           <p className="text-gray-400">Email: annguyen.thachban@gmail.com</p>
         </motion.div>
       </section>
@@ -125,7 +125,6 @@ export default function App() {
             --font-body: 'Inter', sans-serif;
           }
 
-          /* Dòng code thần thánh để ép các tiêu đề dùng font chữ điệu */
           .font-display, h2 {
             font-family: var(--font-display);
           }
