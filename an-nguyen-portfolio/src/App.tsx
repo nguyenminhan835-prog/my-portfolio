@@ -35,18 +35,18 @@ export default function App() {
           </div>
 
           <div className="hidden md:flex gap-8 text-sm text-gray-400">
-            <a href="#" className="text-white">Home</a>
-            <a href="#about" className="hover:text-white">About Me</a>
-            <a href="#projects" className="hover:text-white">Projects</a>
-            <a href="#contact" className="hover:text-white">Contact</a>
+            <a href="#home" className="text-white hover:text-red-400 transition">Home</a>
+            <a href="#about" className="hover:text-white transition">About Me</a>
+            <a href="#projects" className="hover:text-white transition">Projects</a>
+            <a href="#contact" className="hover:text-white transition">Contact</a>
           </div>
         </div>
       </nav>
 
       {/* Hero */}
-      <section className="min-h-screen flex flex-col items-center justify-center text-center px-6 relative z-10">
+      <section id="home" className="min-h-screen flex flex-col items-center justify-center text-center px-6 relative z-10">
         <motion.h1
-          style={{ y: textY, fontFamily: "'Instrument Serif', serif" }} 
+          style={{ y: textY }}
           className="text-5xl sm:text-7xl md:text-8xl leading-[0.95] max-w-6xl"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -65,7 +65,7 @@ export default function App() {
         </motion.p>
       </section>
 
-      {/* About Section - Thêm id="about" */}
+      {/* About */}
       <section id="about" className="min-h-screen flex items-center justify-center px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 80 }}
@@ -74,14 +74,14 @@ export default function App() {
           viewport={{ once: true }}
           className="text-center max-w-2xl"
         >
-          <h2 className="text-4xl mb-6 font-display">About Me</h2> 
+          <h2 className="text-4xl mb-6" style={{ fontFamily: "'Instrument Serif', serif" }}>About Me</h2>
           <p className="text-gray-400">
-            I'm currently a final-year high school student who enjoys learning, communicating, and challenging myself through new experiences. I'm shaping my future step by step.
+            I'm currently a final-year high school student who enjoys learning, communicating, and challenging myself through new experiences.
           </p>
         </motion.div>
       </section>
 
-      {/* Projects Section - Thêm id="projects" */}
+      {/* Projects */}
       <section id="projects" className="min-h-screen flex items-center justify-center px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 80 }}
@@ -90,14 +90,14 @@ export default function App() {
           viewport={{ once: true }}
           className="text-center max-w-2xl"
         >
-          <h2 className="text-4xl mb-6 font-display">Projects</h2> 
+          <h2 className="text-4xl mb-6" style={{ fontFamily: "'Instrument Serif', serif" }}>Projects</h2>
           <p className="text-gray-400">
-            Personal portfolio website, school presentations, and small projects reflecting my learning journey.
+            Personal portfolio website and school projects reflecting my learning journey.
           </p>
         </motion.div>
       </section>
 
-      {/* Contact Section - Thêm id="contact" */}
+      {/* Contact */}
       <section id="contact" className="min-h-screen flex items-center justify-center px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 80 }}
@@ -106,27 +106,23 @@ export default function App() {
           viewport={{ once: true }}
           className="text-center max-w-2xl"
         >
-          <h2 className="text-4xl mb-6 font-display">Contact</h2> 
-          <p className="text-gray-400">Email: annguyen.thachban@gmail.com</p>
+          <h2 className="text-4xl mb-6" style={{ fontFamily: "'Instrument Serif', serif" }}>Contact</h2>
+          <p className="text-gray-400">Email: your.email@example.com</p>
         </motion.div>
       </section>
 
-      {/* Fonts, Smooth Scroll & Ép font chữ điệu */}
+      {/* Smooth scroll CSS */}
       <style>
         {`
-          @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500&display=swap');
-
           html {
             scroll-behavior: smooth;
           }
 
+          @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500&display=swap');
+
           :root {
             --font-display: 'Instrument Serif', serif;
             --font-body: 'Inter', sans-serif;
-          }
-
-          .font-display, h2 {
-            font-family: var(--font-display);
           }
         `}
       </style>
